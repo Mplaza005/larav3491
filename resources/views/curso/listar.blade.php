@@ -16,6 +16,8 @@
         <td>{{$curso->name}}</td>
         <td>{{$curso->descripcion}}</td>
         <td><a href="{{route('curso.show',$curso->id)}}">Mostrar</a></td>
+        <td><a href="{{route('curso.edit',$curso->id)}}">Editar</a></td>
+        <td>
         <td>
             <form action="{{route('curso.destroy',$curso->id)}}" method="POST">
                 @csrf

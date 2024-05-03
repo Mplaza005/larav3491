@@ -41,6 +41,29 @@ class CursoController extends Controller
         return redirect()->route('curso.listar');
     }
 
+     //Edit
+     public function edit(Curso $curso){//Encuentro el Curso
+    
+        return view('curso.edit',compact('curso'));
+  
+      }
+
+      //Update
+    public function update(Request $request,Curso $curso){
+            
+        $curso->name = $request->name;
+        $curso->descripcion = $request->descripcion;
+        $curso->save();
+     
+        return redirect()->route('curso.listar');
+     
+      }
+  
+  
+
+
+
+
 
 
 }
