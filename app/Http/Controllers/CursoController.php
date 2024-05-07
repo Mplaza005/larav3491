@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers;
 use App\Models\Curso;
+use App\Models\User;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class CursoController extends Controller
 {
     public function listar(){
- 
-        $cursos = Curso::orderBy('id', 'desc')->get();
-        return view('curso.listar', compact('cursos'));
+        
+        $profile = Profile::find(1);
+        return $profile;
+
+        // $user=User::find(2);
+        // return $user->profile;
+
+        // $cursos = Curso::orderBy('id', 'desc')->get();
+        // return view('curso.listar', compact('cursos'));
 
     }
     

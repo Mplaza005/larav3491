@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    //  Relacion Uno A Uno con profile 
+    public function profile(){
+        
+        return $this->hasOne('App\Models\Profile'); 
+
+    }
+
 }
